@@ -19,8 +19,6 @@ To run the project, follow these steps:
 ## Files and Folders
 
 - **main.py**: The main Python script that executes text embedding and similarity analysis operations.
-- **app.log**: Log file containing log messages recorded during the process.
-- **data/**: Folder containing sample data files.
 - **embeddings/**: Folder where computed embedding vectors are stored.
 - **plots/**: Folder where visualizations are saved.
 
