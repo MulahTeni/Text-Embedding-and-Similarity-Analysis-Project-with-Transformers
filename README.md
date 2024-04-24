@@ -8,7 +8,7 @@ To run the project, follow these steps:
 
 1. Install the required libraries:
     ```
-    pip install transformers scipy numpy torch pandas matplotlib scikit-learn
+    pip install -r requirements.txt
     ```
 
 2. Start the project by running the `main.py` file:
