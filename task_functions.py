@@ -106,7 +106,7 @@ def visualize_and_save(data, title_base, file_name_base, not_found, first_place,
         plt.figure(figsize=(8, 8))
         plt.pie(counts, labels=labels, colors=colors, autopct='%1.1f%%', startangle=0, explode=explode)
         plt.title('Distribution of Query Results')
-        plt.savefig(f'{file_name_base} Pie Graph.png')
+        plt.savefig(f'plots/{file_name_base} Pie Graph.png')
         plt.show()
     except Exception as e:
         logging.error(f"Failed to generate or save plot: {e}")
@@ -196,7 +196,7 @@ def tsne_f(embeddings, title):
     plt.title(f't-SNE Visualization of {title}')
     plt.xlabel('t-SNE axis 1')
     plt.ylabel('t-SNE axis 2')
-    plt.savefig(f'{title} TSNE.png', format='png', dpi=300)
+    plt.savefig(f'plots/{title} TSNE.png', format='png', dpi=300)
     plt.show()
 
 logger = logging.getLogger(__name__)

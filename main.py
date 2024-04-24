@@ -25,31 +25,31 @@ def main():
     # columns = df.columns
     
     # Yerel dosyalara çıkartılan embedingleri kaydet
-    # save_embeddings(df, columns, gpt2_tokenizer, gpt2_model, "gpt2_task_embeddings", 1000)
-    # save_embeddings(df, columns, bert_tokenizer, bert_model, "bert_task_embeddings", 1000)
+    # save_embeddings(df, columns, gpt2_tokenizer, gpt2_model, "embeddings/gpt2_task_embeddings", 1000)
+    # save_embeddings(df, columns, bert_tokenizer, bert_model, "embeddings/bert_task_embeddings", 1000)
     
-    # gpt2_task_embeddings = load_embeddings("gpt2_task_embeddings.pt")
-    bert_task_embeddings = load_embeddings("bert_task_embeddings.pt")
+    # gpt2_task_embeddings = load_embeddings("embeddings/gpt2_task_embeddings.pt")
+    bert_task_embeddings = load_embeddings("embeddings/bert_task_embeddings.pt")
     
     # Soruya göre insan cevabı bulma
-    # task(gpt2_task_embeddings, "soru", "insan cevabı", "Question_Human_GPT2")
-    task(bert_task_embeddings, "soru", "insan cevabı", "Question_Human_BERT")
+    # task(gpt2_task_embeddings, "soru", "insan cevabı", "GPT2 Question Human")
+    task(bert_task_embeddings, "soru", "insan cevabı", "BERT Question Human")
     
     # Soruya göre makine cevabı bulma
-    # task(gpt2_task_embeddings, "soru", "makine cevabı", "Question_Machine_GPT2")
-    task(bert_task_embeddings, "soru", "makine cevabı", "Question_Machine_BERT")
+    # task(gpt2_task_embeddings, "soru", "makine cevabı", "GPT2 Question Machine")
+    task(bert_task_embeddings, "soru", "makine cevabı", "BERT Question Machine")
     
     # İnsan cevabına göre soru bulma
-    # task(gpt2_task_embeddings, "insan cevabı", "soru", "Human_Question_GPT2")
-    task(bert_task_embeddings, "insan cevabı", "soru", "Human_Question_BERT")
+    # task(gpt2_task_embeddings, "insan cevabı", "soru", "GPT2 Human Question")
+    task(bert_task_embeddings, "insan cevabı", "soru", "BERT Human Question")
     
     # Makine cevabına göre soru bulma
-    # task(gpt2_task_embeddings, "makine cevabı", "soru", "Machine_Question_GPT2")
-    task(bert_task_embeddings, "makine cevabı", "soru", "Machine_Question_BERT")
+    # task(gpt2_task_embeddings, "makine cevabı", "soru", "GPT2 Machine Question")
+    task(bert_task_embeddings, "makine cevabı", "soru", "BERT Machine Question")
     
     # TSNE Görselleştirme
-    # tsne_f(gpt2_task_embeddings, "TSNE_GPT2")
-    tsne_f(bert_task_embeddings, "TSNE_BERT")
+    # tsne_f(gpt2_task_embeddings, "GPT2")
+    tsne_f(bert_task_embeddings, "BERT")
         
 if __name__ == "__main__":
     main()
